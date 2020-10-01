@@ -18,6 +18,7 @@ import com.example.quiz_sterlingj4.data.QuizResults;
 import com.example.quiz_sterlingj4.data.User;
 import com.example.quiz_sterlingj4.data.UserDao;
 import com.example.quiz_sterlingj4.data.UserDatabase;
+import com.example.quiz_sterlingj4.data.UserDatabase2;
 
 public class Results extends AppCompatActivity {
     int corr;
@@ -53,25 +54,22 @@ public class Results extends AppCompatActivity {
             }
         });
 
-        /*
-        final UserDatabase db = Room.databaseBuilder(getApplicationContext(),
-                UserDatabase.class, "database").build();
+        final UserDatabase2 db = Room.databaseBuilder(getApplicationContext(),
+                UserDatabase2.class, UserDatabase2.NAME).build();
         final QuizDao quizDao = db.getQuizDao();
         final UserDao userDao = db.getUserDao();
-        final QuizResults result = new QuizResults();
-        result.setScore(corr);
+
 
         new Thread(new Runnable() {
             @Override
             public void run() {
+                QuizResults result = new QuizResults();
+                result.setScore(corr);
                 int id = userDao.getLoggedInUser();
-                result.setUserId(id);
+                result.setUser(id);
                 quizDao.insert(result);
             }
         }).start();
-
-
-         */
 
 
     }
