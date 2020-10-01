@@ -82,12 +82,6 @@ public class MainActivity extends AppCompatActivity {
         final String field1 = text1.getText().toString();
         final String field2 = text2.getText().toString();
 
-        boolean valid_user = false;
-
-        final UserDatabase db = Room.databaseBuilder(getApplicationContext(),
-                UserDatabase.class, "database").build();
-        final UserDao userDao = db.getUserDao();
-        final User[] usr = new User[1];
         final UserDatabase2 newDb = Room.databaseBuilder(getApplicationContext(),
                 UserDatabase2.class, UserDatabase2.NAME).build();
         final UserDao userDao1 = newDb.getUserDao();
@@ -95,32 +89,19 @@ public class MainActivity extends AppCompatActivity {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                User user = new User();
-                user.setFirstName("Qwerty");
-                user.setLastName("Sanders");
-                user.setEmail("qe");
-                //user.setBirthday("01/01/1998");
-                user.setPassword("qwe123");
-                userDao1.insert(user);
+                User user;
 
-                openUserPage();
-
-                /*
-                user[0] = userDao.findByEmailPass(field1, field2);
+                user = userDao1.findByEmailPass(field1, field2);
 
                 if (user != null) {
-                    userDao.UpdateStatus(user[0].getId(), true);
+                    userDao1.UpdateStatus(user.getId(), true);
                     openUserPage();
                 } else {
                     openDialogue("Wrong email or password");
                 }
 
-                 */
-
             }
         }).start();
-
-        db.close();
 
 
     }
