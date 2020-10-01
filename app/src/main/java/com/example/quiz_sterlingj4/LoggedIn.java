@@ -22,6 +22,20 @@ public class LoggedIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logged_in);
+
+        //Accesses database and gets users first name
+        final UserDatabase2 ndb = Room.databaseBuilder(getApplicationContext(),
+                UserDatabase2.class, UserDatabase2.NAME).build();
+        final UserDao userDao1 = ndb.getUserDao();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                int id = userDao1.getLoggedInUser();
+                userDao1.UpdateStatus(id, false);
+            }
+        }).start();
+        ndb.close();
+
         //Event listener for logout button
         Button button = findViewById(R.id.logoutB);
         button.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +69,7 @@ public class LoggedIn extends AppCompatActivity {
     }
     //Logout process
     public void logout() {
+        //Accesses database and sets logged_in as false
         final UserDatabase2 db = Room.databaseBuilder(getApplicationContext(),
                 UserDatabase2.class, UserDatabase2.NAME).build();
         final UserDao userDao = db.getUserDao();
