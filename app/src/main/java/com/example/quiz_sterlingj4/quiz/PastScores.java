@@ -23,7 +23,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
-
+// Display past scores of current user
 public class PastScores extends AppCompatActivity {
 
     List<Integer> scores;
@@ -36,6 +36,8 @@ public class PastScores extends AppCompatActivity {
         setContentView(R.layout.activity_past_scores);
 
         scoreText = findViewById(R.id.displayScoresText);
+
+        // Listener to go back to menu
         Button button = findViewById(R.id.pastRB);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,9 +46,7 @@ public class PastScores extends AppCompatActivity {
             }
         });
 
-        scores = new ArrayList<>();
-        scores.add(1);
-
+        // Get database and return current user scores
         final UserDatabase2 db = Room.databaseBuilder(getApplicationContext(),
                 UserDatabase2.class, UserDatabase2.NAME).build();
         final UserDao userDao = db.getUserDao();
@@ -63,6 +63,7 @@ public class PastScores extends AppCompatActivity {
         }).start();
     }
 
+    // Method to take list of scores and add to scoreText
     public void printScores(List<Integer> scoresList) {
         scores = new ArrayList<>(scoresList);
         StringBuilder s = new StringBuilder();

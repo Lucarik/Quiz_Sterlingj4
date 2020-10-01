@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey;
 
 import java.util.Date;
 
-
+// Creates user table in database consisting of first, last name, email, birthday, and password
 @Entity
 public class User {
     @PrimaryKey(autoGenerate = true)

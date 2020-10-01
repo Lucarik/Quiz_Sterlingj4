@@ -79,9 +79,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+        // Get email and password from input
         final String field1 = text1.getText().toString();
         final String field2 = text2.getText().toString();
 
+        // Get database and check if user with email and password exist, opens next
+        // activity if match found, alert dialog if no match
         final UserDatabase2 newDb = Room.databaseBuilder(getApplicationContext(),
                 UserDatabase2.class, UserDatabase2.NAME).build();
         final UserDao userDao1 = newDb.getUserDao();

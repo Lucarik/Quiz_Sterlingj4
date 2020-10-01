@@ -23,6 +23,7 @@ public class LoggedIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logged_in);
 
+        /*
         //Accesses database and gets users first name
         final UserDatabase2 ndb = Room.databaseBuilder(getApplicationContext(),
                 UserDatabase2.class, UserDatabase2.NAME).build();
@@ -35,6 +36,8 @@ public class LoggedIn extends AppCompatActivity {
             }
         }).start();
         ndb.close();
+
+         */
 
         //Event listener for logout button
         Button button = findViewById(R.id.logoutB);

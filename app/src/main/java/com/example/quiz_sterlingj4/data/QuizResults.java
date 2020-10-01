@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
-
+// Makes table in database to store quiz results, consisting of user id and quiz score
 @Entity(foreignKeys = {
         @ForeignKey(
                 entity = User.class,

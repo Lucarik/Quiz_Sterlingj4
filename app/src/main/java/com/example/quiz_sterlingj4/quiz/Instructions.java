@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.quiz_sterlingj4.LoggedIn;
 import com.example.quiz_sterlingj4.R;
-
+// Class to view quiz instructions
 public class Instructions extends AppCompatActivity {
 
     @Override
@@ -17,6 +17,7 @@ public class Instructions extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instructions);
 
+        // Initialize and call listener
         Button button = findViewById(R.id.instrB);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,7 +27,7 @@ public class Instructions extends AppCompatActivity {
         });
     }
 
-    //Method to open page after logging in
+    //Method to go back to menu
     public void openUserPage() {
         Intent intent = new Intent(this, LoggedIn.class);
         startActivity(intent);

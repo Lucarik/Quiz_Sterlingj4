@@ -18,7 +18,7 @@ import com.example.quiz_sterlingj4.R;
 public class Question2 extends AppCompatActivity {
     // Saves current answer index
     int ans;
-    // Saves previous clicked button
+    // Initialize buttons
     Button prev;
     Button confirm;
     Button button;
@@ -40,6 +40,7 @@ public class Question2 extends AppCompatActivity {
         int value = bundle.getInt("correct_answers");
         corr += value;
 
+        // Assign ViewText, buttons to respective id's
         ansText = findViewById(R.id.ansText2);
         button = findViewById(R.id.next2B);
         button1 = findViewById(R.id.q2a1B);
@@ -88,6 +89,7 @@ public class Question2 extends AppCompatActivity {
         });
     }
 
+    // Open next question activity
     public void openQuestion3Page() {
         Intent intent = new Intent(this, Question3.class);
         intent.putExtra("correct_answers", corr);

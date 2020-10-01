@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@color/lightBlue"/>
+    <item android:drawable="@drawable/backgroundb"/>
 
     <item>
         <bitmap android:src="@drawable/login_icon"
@@ -9,6 +9,6 @@
     <item android:bottom="300dp">
     <bitmap
         android:gravity="center"
-        android:src="@drawable/text1"/>
+        android:src="@drawable/title"/>
     </item>
 </layer-list>
