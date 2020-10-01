@@ -28,7 +28,4 @@ public class Dialogue extends AppCompatDialogFragment {
 
         return builder.create();
     }
-    public AlertDialog.Builder createNew() {
-        return new AlertDialog.Builder(getActivity());
-    }
 }

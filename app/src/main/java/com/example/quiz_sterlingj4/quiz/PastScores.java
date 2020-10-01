@@ -1,28 +1,22 @@
 package com.example.quiz_sterlingj4.quiz;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
+
 import com.example.quiz_sterlingj4.LoggedIn;
 import com.example.quiz_sterlingj4.R;
 import com.example.quiz_sterlingj4.data.QuizDao;
-import com.example.quiz_sterlingj4.data.User;
 import com.example.quiz_sterlingj4.data.UserDao;
 import com.example.quiz_sterlingj4.data.UserDatabase2;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
-import java.util.ListIterator;
 // Display past scores of current user
 public class PastScores extends AppCompatActivity {
 

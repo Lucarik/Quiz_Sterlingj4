@@ -1,8 +1,5 @@
 package com.example.quiz_sterlingj4.quiz;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
@@ -11,13 +8,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
+
 import com.example.quiz_sterlingj4.LoggedIn;
 import com.example.quiz_sterlingj4.R;
 import com.example.quiz_sterlingj4.data.QuizDao;
 import com.example.quiz_sterlingj4.data.QuizResults;
-import com.example.quiz_sterlingj4.data.User;
 import com.example.quiz_sterlingj4.data.UserDao;
-import com.example.quiz_sterlingj4.data.UserDatabase;
 import com.example.quiz_sterlingj4.data.UserDatabase2;
 
 public class Results extends AppCompatActivity {

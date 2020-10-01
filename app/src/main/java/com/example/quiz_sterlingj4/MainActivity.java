@@ -10,15 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
 import com.example.quiz_sterlingj4.data.User;
-import com.example.quiz_sterlingj4.data.User1;
 import com.example.quiz_sterlingj4.data.UserDao;
-import com.example.quiz_sterlingj4.data.UserDao1;
-import com.example.quiz_sterlingj4.data.UserDatabase;
-import com.example.quiz_sterlingj4.data.UserDatabase1;
 import com.example.quiz_sterlingj4.data.UserDatabase2;
-import com.example.quiz_sterlingj4.data.UserLite;
-import com.example.quiz_sterlingj4.data.UserLiteDao;
-import com.example.quiz_sterlingj4.data.newDatabase;
 
 import java.io.File;
 
@@ -27,12 +20,6 @@ public class MainActivity extends AppCompatActivity {
     //Method to check if an EditText box is empty
     private boolean isEmpty(EditText etText) {
         return etText.getText().toString().trim().length() == 0;
-    }
-
-    //Method of checking if specified file exists
-    public boolean fileExist(String filename){
-        File file = getBaseContext().getFileStreamPath(filename);
-        return file.exists();
     }
 
     @Override

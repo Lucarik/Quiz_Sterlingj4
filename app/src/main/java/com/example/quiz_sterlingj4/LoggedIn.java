@@ -9,9 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
-import com.example.quiz_sterlingj4.data.User;
 import com.example.quiz_sterlingj4.data.UserDao;
-import com.example.quiz_sterlingj4.data.UserDatabase;
 import com.example.quiz_sterlingj4.data.UserDatabase2;
 import com.example.quiz_sterlingj4.quiz.Instructions;
 import com.example.quiz_sterlingj4.quiz.PastScores;
@@ -33,7 +31,6 @@ public class LoggedIn extends AppCompatActivity {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                int id = userDao1.getLoggedInUser();
                 String fName = userDao1.getLoggedInName();
                 userText.setText(fName);
             }
@@ -77,7 +74,7 @@ public class LoggedIn extends AppCompatActivity {
         final UserDatabase2 db = Room.databaseBuilder(getApplicationContext(),
                 UserDatabase2.class, UserDatabase2.NAME).build();
         final UserDao userDao = db.getUserDao();
-        final User[] user = new User[1];
+
         new Thread(new Runnable() {
             @Override
             public void run() {
