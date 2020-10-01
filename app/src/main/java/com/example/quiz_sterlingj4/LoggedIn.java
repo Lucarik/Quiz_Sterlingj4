@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
@@ -23,7 +24,8 @@ public class LoggedIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logged_in);
 
-        /*
+        final TextView userText = findViewById(R.id.usertext);
+
         //Accesses database and gets users first name
         final UserDatabase2 ndb = Room.databaseBuilder(getApplicationContext(),
                 UserDatabase2.class, UserDatabase2.NAME).build();
@@ -32,12 +34,11 @@ public class LoggedIn extends AppCompatActivity {
             @Override
             public void run() {
                 int id = userDao1.getLoggedInUser();
-                userDao1.UpdateStatus(id, false);
+                String fName = userDao1.getLoggedInName();
+                userText.setText(fName);
             }
         }).start();
         ndb.close();
-
-         */
 
         //Event listener for logout button
         Button button = findViewById(R.id.logoutB);

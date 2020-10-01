@@ -26,6 +26,9 @@ public interface UserDao {
     @Query("SELECT uid FROM user WHERE logged_in = 1")
     int getLoggedInUser();
 
+    @Query("SELECT first_name FROM user WHERE logged_in = 1")
+    String getLoggedInName();
+
     @Insert
     void insertAll(User... users);
 
