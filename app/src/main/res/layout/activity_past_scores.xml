@@ -6,4 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".quiz.PastScores">
 
+    <Button
+        android:id="@+id/pastRB"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:text="Return to previous page"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/displayScoresText" />
+
+    <TextView
+        android:id="@+id/displayScoresText"
+        android:layout_width="140dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="112dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/pastRB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="13dp"
+        android:text="Past Scores"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/displayScoresText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
