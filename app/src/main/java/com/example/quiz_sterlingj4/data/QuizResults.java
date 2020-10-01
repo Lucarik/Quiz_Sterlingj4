@@ -23,4 +23,12 @@ public class QuizResults {
     @ColumnInfo(name = "user")
     public int user;
 
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public void setUser(int user) {
+        this.user = user;
+    }
+
 }

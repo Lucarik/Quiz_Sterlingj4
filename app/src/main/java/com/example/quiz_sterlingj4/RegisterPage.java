@@ -14,6 +14,7 @@ import androidx.room.Room;
 import com.example.quiz_sterlingj4.data.User;
 import com.example.quiz_sterlingj4.data.UserDao;
 import com.example.quiz_sterlingj4.data.UserDatabase;
+import com.example.quiz_sterlingj4.data.UserDatabase2;
 
 import java.io.File;
 import java.text.DateFormat;
@@ -141,8 +142,8 @@ public class RegisterPage extends AppCompatActivity {
         String field5 = text5.getText().toString();
 
 
-        final UserDatabase db = Room.databaseBuilder(getApplicationContext(),
-                UserDatabase.class, "database").build();
+        final UserDatabase2 db = Room.databaseBuilder(getApplicationContext(),
+                UserDatabase2.class, UserDatabase2.NAME).build();
         final UserDao userDao = db.getUserDao();
         final User user = new User();
         user.setFirstName(field1);

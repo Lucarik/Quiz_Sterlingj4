@@ -15,6 +15,7 @@ import com.example.quiz_sterlingj4.data.UserDao;
 import com.example.quiz_sterlingj4.data.UserDao1;
 import com.example.quiz_sterlingj4.data.UserDatabase;
 import com.example.quiz_sterlingj4.data.UserDatabase1;
+import com.example.quiz_sterlingj4.data.UserDatabase2;
 import com.example.quiz_sterlingj4.data.UserLite;
 import com.example.quiz_sterlingj4.data.UserLiteDao;
 import com.example.quiz_sterlingj4.data.newDatabase;
@@ -87,18 +88,18 @@ public class MainActivity extends AppCompatActivity {
                 UserDatabase.class, "database").build();
         final UserDao userDao = db.getUserDao();
         final User[] usr = new User[1];
-        final UserDatabase1 newDb = Room.databaseBuilder(getApplicationContext(),
-                UserDatabase1.class, UserDatabase1.NAME).build();
-        final UserDao1 userDao1 = newDb.getUserDao1();
+        final UserDatabase2 newDb = Room.databaseBuilder(getApplicationContext(),
+                UserDatabase2.class, UserDatabase2.NAME).build();
+        final UserDao userDao1 = newDb.getUserDao();
 
         new Thread(new Runnable() {
             @Override
             public void run() {
-                User1 user = new User1();
+                User user = new User();
                 user.setFirstName("Qwerty");
                 user.setLastName("Sanders");
                 user.setEmail("qe");
-                user.setBirthday("01/01/1998");
+                //user.setBirthday("01/01/1998");
                 user.setPassword("qwe123");
                 userDao1.insert(user);
 
