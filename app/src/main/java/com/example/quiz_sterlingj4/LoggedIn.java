@@ -13,6 +13,7 @@ import com.example.quiz_sterlingj4.data.UserDao;
 import com.example.quiz_sterlingj4.data.UserDatabase;
 import com.example.quiz_sterlingj4.data.UserDatabase2;
 import com.example.quiz_sterlingj4.quiz.Instructions;
+import com.example.quiz_sterlingj4.quiz.PastScores;
 import com.example.quiz_sterlingj4.quiz.Question1;
 
 public class LoggedIn extends AppCompatActivity {
@@ -43,6 +44,14 @@ public class LoggedIn extends AppCompatActivity {
                 openQuestion1Page();
             }
         });
+        Button button3 = findViewById(R.id.viewResultsB);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openResultsPage();
+            }
+        });
+
     }
     //Logout process
     public void logout() {
@@ -74,6 +83,11 @@ public class LoggedIn extends AppCompatActivity {
 
     public void openQuestion1Page() {
         Intent intent = new Intent(this, Question1.class);
+        startActivity(intent);
+    }
+
+    public void openResultsPage() {
+        Intent intent = new Intent(this, PastScores.class);
         startActivity(intent);
     }
 }
