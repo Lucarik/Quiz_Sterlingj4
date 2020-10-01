@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Quiz Game</string>
+    <string name="please_choose_an_option">No account?</string>
+    <string name="login">Login</string>
+    <string name="register">Register Here</string>
+    <string name="registration">Registration</string>
+    <string name="first_name">First Name:</string>
+    <string name="last_name">Last Name:</string>
+    <string name="email">Email:</string>
+    <string name="birth_date">Birth Date:</string>
+    <string name="password">Password:</string>
+    <string name="bob">Bob</string>
+    <string name="anderson">Anderson</string>
+    <string name="example_gmail_com">example@gmail.com</string>
+    <string name="passwords">Password</string>
+    <string name="_17_01_1998">17/01/1998</string>
+    <string name="registers">Register</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="no_account">No account?</string>
+    <string name="register2">Register</string>
+    <string name="you_are_logged_in">You are logged in</string>
+    <string name="log_out">Log out</string>
+    <string name="welcome">Welcome</string>
+</resources>
