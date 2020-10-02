@@ -51,17 +51,7 @@ public class RegisterPage extends AppCompatActivity {
                 String field1 = text1.getText().toString();
                 String field2 = text2.getText().toString();
                 String field3 = text3.getText().toString();
-                DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy"); // Make sure user insert date into edittext in this format.
-
-                Date field4 = null;
-
-                try {
-                    String dob_var = (text4.getText().toString());
-
-                    field4 = formatter.parse(dob_var);
-                } catch (java.text.ParseException e) {
-                    Log.i(TAG, e.toString());
-                }
+                String field4 = text4.getText().toString();
                 String field5 = text5.getText().toString();
                 //Boolean for if any of the input fields are empty
                 boolean empty = (isEmpty(text1) || isEmpty(text2) || isEmpty(text3) ||
@@ -84,6 +74,13 @@ public class RegisterPage extends AppCompatActivity {
                 //Checks if email is valid
                 if (!Patterns.EMAIL_ADDRESS.matcher(field3).matches()) {
                     text3.setError("Invalid email (Ex. example@email.com)");
+                    noError = false;
+                }
+                //Checks if date is valid
+                pattern = Pattern.compile("(0?[1-9]|[12][0-9]|3[01])/(0?[1-9]|1[012])/((19|20)\\d\\d)");
+                matcher = pattern.matcher(field4);
+                if (!matcher.find()) {
+                    text4.setError("Not valid date format. Format: dd/mm/yyyy");
                     noError = false;
                 }
                 //Checks if password is valid

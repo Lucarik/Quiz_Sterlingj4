@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--Question activity -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/backgroundo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundo"
     tools:context=".quiz.Question4">
 
     <TextView
@@ -13,9 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="86dp"
-        android:layout_marginBottom="45dp"
-        android:text="@string/which_are_programming_languages"
-        app:layout_constraintBottom_toTopOf="@+id/q4a1B"
+        android:layout_marginBottom="15dp"
+        android:text="Which are programming languages?"
+        app:layout_constraintBottom_toTopOf="@+id/q4a4B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,26 +27,27 @@
         android:layout_marginLeft="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
-        android:text="@string/next_question"
+        android:text="Next Question"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/conf4B" />
+        app:layout_constraintTop_toBottomOf="@+id/ansText4" />
 
     <Button
         android:id="@+id/q4a1B"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginLeft="46dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginRight="46dp"
-        android:layout_marginBottom="38dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="97dp"
+        android:layout_marginEnd="143dp"
+        android:layout_marginRight="143dp"
+        android:layout_marginBottom="97dp"
         android:background="@drawable/roundedbutton"
-        android:text="@string/assembly"
-        app:layout_constraintBottom_toTopOf="@+id/q4a2B"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Assembly"
+        app:layout_constraintBottom_toTopOf="@+id/next4B"
+        app:layout_constraintEnd_toStartOf="@+id/q4a3B"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
@@ -55,73 +55,75 @@
         android:id="@+id/q4a2B"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginLeft="46dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginRight="46dp"
-        android:layout_marginBottom="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="147dp"
+        android:layout_marginRight="147dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/roundedbutton"
-        android:text="@string/paper"
+        android:text="Paper"
         app:layout_constraintBottom_toTopOf="@+id/q4a3B"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/q4a4B"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/q4a1B" />
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <Button
         android:id="@+id/q4a3B"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginLeft="46dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginRight="46dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/roundedbutton"
-        android:text="@string/minute"
-        app:layout_constraintBottom_toTopOf="@+id/q4a4B"
+        android:text="Minute"
+        app:layout_constraintBottom_toTopOf="@+id/ansText4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/q4a2B" />
+        app:layout_constraintStart_toEndOf="@+id/q4a1B"
+        app:layout_constraintTop_toBottomOf="@+id/q4a4B" />
 
     <Button
         android:id="@+id/q4a4B"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginLeft="46dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginRight="46dp"
-        android:layout_marginBottom="35dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/roundedbutton"
-        android:text="@string/java"
-        app:layout_constraintBottom_toTopOf="@+id/ansText4"
+        android:text="Java"
+        app:layout_constraintBottom_toTopOf="@+id/q4a3B"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/q4a3B" />
+        app:layout_constraintStart_toEndOf="@+id/q4a2B"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <Button
         android:id="@+id/conf4B"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        android:text="@string/confirm"
-        app:layout_constraintBottom_toTopOf="@+id/next4B"
+        android:layout_marginEnd="321dp"
+        android:layout_marginRight="321dp"
+        android:layout_marginBottom="32dp"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="@+id/ansText4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ansText4" />
+        app:layout_constraintStart_toEndOf="@+id/ansText4" />
 
     <TextView
         android:id="@+id/ansText4"
-        android:layout_width="213dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="12dp"
         android:maxLines="1"
-        android:text="@string/correct_answer"
+        android:text="Correct Answer"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/conf4B"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/next4B"
+        app:layout_constraintEnd_toStartOf="@+id/conf4B"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/q4a4B" />
+        app:layout_constraintTop_toBottomOf="@+id/q4a3B" />
 </androidx.constraintlayout.widget.ConstraintLayout>

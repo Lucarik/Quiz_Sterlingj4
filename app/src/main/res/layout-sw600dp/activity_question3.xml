@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--Question activity -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/backgroundy"
+    android:background="@drawable/backgroundp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".quiz.Question5">
+    tools:context=".quiz.Question3">
 
     <TextView
         android:id="@+id/questionText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="86dp"
-        android:layout_marginBottom="44dp"
-        android:text="@string/what_type_of_programming_language_is_python"
-        app:layout_constraintBottom_toTopOf="@+id/q5a1B"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="45dp"
+        android:text="When was the programming langage Java first released?"
+        app:layout_constraintBottom_toTopOf="@+id/q3a1B"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/next5B"
+        android:id="@+id/next3B"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
-        android:text="@string/finish_quiz"
+        android:text="Next Question"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/conf5B" />
+        app:layout_constraintTop_toBottomOf="@+id/conf3B" />
 
     <Button
-        android:id="@+id/q5a1B"
+        android:id="@+id/q3a1B"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="46dp"
@@ -45,14 +45,14 @@
         android:layout_marginRight="46dp"
         android:layout_marginBottom="36dp"
         android:background="@drawable/roundedbutton"
-        android:text="@string/high_level"
-        app:layout_constraintBottom_toTopOf="@+id/q5a2B"
+        android:text="1997"
+        app:layout_constraintBottom_toTopOf="@+id/q3a2B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/questionText1" />
 
     <Button
-        android:id="@+id/q5a2B"
+        android:id="@+id/q3a2B"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="46dp"
@@ -61,14 +61,14 @@
         android:layout_marginRight="46dp"
         android:layout_marginBottom="39dp"
         android:background="@drawable/roundedbutton"
-        android:text="@string/medium_level"
-        app:layout_constraintBottom_toTopOf="@+id/q5a3B"
+        android:text="2005"
+        app:layout_constraintBottom_toTopOf="@+id/q3a3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/q5a1B" />
+        app:layout_constraintTop_toBottomOf="@+id/q3a1B" />
 
     <Button
-        android:id="@+id/q5a3B"
+        android:id="@+id/q3a3B"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="46dp"
@@ -77,14 +77,14 @@
         android:layout_marginRight="46dp"
         android:layout_marginBottom="36dp"
         android:background="@drawable/roundedbutton"
-        android:text="@string/low_level"
-        app:layout_constraintBottom_toTopOf="@+id/q5a4B"
+        android:text="2001"
+        app:layout_constraintBottom_toTopOf="@+id/q3a4B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/q5a2B" />
+        app:layout_constraintTop_toBottomOf="@+id/q3a2B" />
 
     <Button
-        android:id="@+id/q5a4B"
+        android:id="@+id/q3a4B"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="46dp"
@@ -93,35 +93,36 @@
         android:layout_marginRight="46dp"
         android:layout_marginBottom="41dp"
         android:background="@drawable/roundedbutton"
-        android:text="@string/none_of_the_above"
-        app:layout_constraintBottom_toTopOf="@+id/ansText5"
+        android:text="1995"
+        app:layout_constraintBottom_toTopOf="@+id/ansText3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/q5a3B" />
+        app:layout_constraintTop_toBottomOf="@+id/q3a3B" />
 
     <Button
-        android:id="@+id/conf5B"
+        android:id="@+id/conf3B"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
-        android:text="@string/confirm"
-        app:layout_constraintBottom_toTopOf="@+id/next5B"
+        android:text="Confirm"
+        app:layout_constraintBottom_toTopOf="@+id/next3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ansText5" />
+        app:layout_constraintTop_toBottomOf="@+id/ansText3" />
 
     <TextView
-        android:id="@+id/ansText5"
-        android:layout_width="217dp"
-        android:layout_height="61dp"
+        android:id="@+id/ansText3"
+        android:layout_width="225dp"
+        android:layout_height="54dp"
         android:layout_marginBottom="20dp"
         android:maxLines="1"
-        android:text="@string/correct_answer"
+        android:text="Correct Answer"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/conf5B"
+        app:layout_constraintBottom_toTopOf="@+id/conf3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/q5a4B" />
+        app:layout_constraintTop_toBottomOf="@+id/q3a4B" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

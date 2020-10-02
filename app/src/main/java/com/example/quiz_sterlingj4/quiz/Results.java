@@ -35,9 +35,10 @@ public class Results extends AppCompatActivity {
         int value = bundle.getInt("correct_answers");
         corr += value;
 
-
         button = findViewById(R.id.returnStartB);
         corrAns = findViewById(R.id.corrAnsText);
+
+        // Set correct answer text and text color
         corrAns.setText(Integer.toString(corr));
         if (corr < 3) {
             corrAns.setTextColor(Color.parseColor("#ff4f4f"));
@@ -52,11 +53,11 @@ public class Results extends AppCompatActivity {
             }
         });
 
+        // Save quiz result to database
         final UserDatabase2 db = Room.databaseBuilder(getApplicationContext(),
                 UserDatabase2.class, UserDatabase2.NAME).build();
         final QuizDao quizDao = db.getQuizDao();
         final UserDao userDao = db.getUserDao();
-
 
         new Thread(new Runnable() {
             @Override

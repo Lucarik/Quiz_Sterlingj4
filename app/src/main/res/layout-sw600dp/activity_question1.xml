@@ -1,42 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--Question activity -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/backgroundy"
+    android:background="@drawable/backgroundlb"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".quiz.Question5">
+    tools:context=".quiz.Question1">
 
     <TextView
-        android:id="@+id/questionText1"
+        android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="86dp"
-        android:layout_marginBottom="44dp"
-        android:text="@string/what_type_of_programming_language_is_python"
-        app:layout_constraintBottom_toTopOf="@+id/q5a1B"
+        android:layout_marginBottom="45dp"
+        android:text="Select the primary colors"
+        app:layout_constraintBottom_toTopOf="@+id/q1a1B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/next5B"
+        android:id="@+id/next1B"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
-        android:text="@string/finish_quiz"
+        android:text="Next Question"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/conf5B" />
+        app:layout_constraintTop_toBottomOf="@+id/conf1B" />
 
     <Button
-        android:id="@+id/q5a1B"
+        android:id="@+id/q1a1B"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginLeft="46dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginRight="46dp"
+        android:layout_marginBottom="38dp"
+        android:background="@drawable/roundedbutton"
+        android:text="Red"
+        app:layout_constraintBottom_toTopOf="@+id/q1a2B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <Button
+        android:id="@+id/q1a2B"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginLeft="46dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginRight="46dp"
+        android:layout_marginBottom="38dp"
+        android:background="@drawable/roundedbutton"
+        android:text="Blue"
+        app:layout_constraintBottom_toTopOf="@+id/q1a3B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q1a1B" />
+
+    <Button
+        android:id="@+id/q1a3B"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="46dp"
@@ -45,83 +76,51 @@
         android:layout_marginRight="46dp"
         android:layout_marginBottom="36dp"
         android:background="@drawable/roundedbutton"
-        android:text="@string/high_level"
-        app:layout_constraintBottom_toTopOf="@+id/q5a2B"
+        android:text="White"
+        app:layout_constraintBottom_toTopOf="@+id/q1a4B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/questionText1" />
+        app:layout_constraintTop_toBottomOf="@+id/q1a2B" />
 
     <Button
-        android:id="@+id/q5a2B"
+        android:id="@+id/q1a4B"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="46dp"
         android:layout_marginLeft="46dp"
         android:layout_marginEnd="46dp"
         android:layout_marginRight="46dp"
-        android:layout_marginBottom="39dp"
+        android:layout_marginBottom="35dp"
         android:background="@drawable/roundedbutton"
-        android:text="@string/medium_level"
-        app:layout_constraintBottom_toTopOf="@+id/q5a3B"
+        android:text="Yellow"
+        app:layout_constraintBottom_toTopOf="@+id/ansText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/q5a1B" />
+        app:layout_constraintTop_toBottomOf="@+id/q1a3B" />
 
     <Button
-        android:id="@+id/q5a3B"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginLeft="46dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginRight="46dp"
-        android:layout_marginBottom="36dp"
-        android:background="@drawable/roundedbutton"
-        android:text="@string/low_level"
-        app:layout_constraintBottom_toTopOf="@+id/q5a4B"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/q5a2B" />
-
-    <Button
-        android:id="@+id/q5a4B"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginLeft="46dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginRight="46dp"
-        android:layout_marginBottom="41dp"
-        android:background="@drawable/roundedbutton"
-        android:text="@string/none_of_the_above"
-        app:layout_constraintBottom_toTopOf="@+id/ansText5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/q5a3B" />
-
-    <Button
-        android:id="@+id/conf5B"
+        android:id="@+id/conf1B"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
-        android:text="@string/confirm"
-        app:layout_constraintBottom_toTopOf="@+id/next5B"
+        android:text="Confirm"
+        app:layout_constraintBottom_toTopOf="@+id/next1B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ansText5" />
+        app:layout_constraintTop_toBottomOf="@+id/ansText" />
 
     <TextView
-        android:id="@+id/ansText5"
-        android:layout_width="217dp"
-        android:layout_height="61dp"
+        android:id="@+id/ansText"
+        android:layout_width="223dp"
+        android:layout_height="55dp"
         android:layout_marginBottom="20dp"
-        android:maxLines="1"
-        android:text="@string/correct_answer"
+        android:text="Correct Answer"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/conf5B"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/conf1B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/q5a4B" />
+        app:layout_constraintTop_toBottomOf="@+id/q1a4B" />
 </androidx.constraintlayout.widget.ConstraintLayout>
